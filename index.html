@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chandrabali Rudra — Classical Vocalist & Music Educator with 30+ years of experience in Hindustani Classical Music. Join 500+ students worldwide in an immersive learning journey.">
+  <meta name="keywords" content="Chandrabali Rudra, Hindustani Classical Music, vocal training, music teacher, raga, classical vocalist, online music classes">
+  <meta property="og:title" content="Chandrabali Rudra | Classical Vocalist & Music Educator">
+  <meta property="og:description" content="Experience the ancient tradition of Hindustani Classical Music through personalised training with a master vocalist.">
+  <title>Chandrabali Rudra | Classical Vocalist & Music Educator</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-text" id="cursorText"></div>
+
+  <!-- ===== PRELOADER ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-symbol">
+        <svg class="preloader-svg" viewBox="0 0 120 120">
+          <circle class="preloader-track" cx="60" cy="60" r="54" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="1"/>
+          <circle class="preloader-progress-ring" cx="60" cy="60" r="54" fill="none" stroke="#C9A84C" stroke-width="1" stroke-linecap="round"/>
+          <text x="60" y="76" text-anchor="middle" class="preloader-note-text">♪</text>
+        </svg>
+      </div>
+      <div class="preloader-name">
+        <span class="pl-char">C</span><span class="pl-char">h</span><span class="pl-char">a</span><span class="pl-char">n</span><span class="pl-char">d</span><span class="pl-char">r</span><span class="pl-char">a</span><span class="pl-char">b</span><span class="pl-char">a</span><span class="pl-char">l</span><span class="pl-char">i</span>
+      </div>
+      <div class="preloader-tagline">Classical Vocalist & Educator</div>
+      <div class="preloader-bar-wrap"><div class="preloader-bar" id="preloaderBar"></div></div>
+    </div>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo" id="navLogo">
+      <span class="nav-logo-letters">CR</span>
+      <span class="nav-logo-sub">Chandrabali Rudra</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link" data-cursor="explore">About</a></li>
+      <li><a href="#timeline" class="nav-link" data-cursor="explore">Journey</a></li>
+      <li><a href="#classes" class="nav-link" data-cursor="explore">Classes</a></li>
+      <li><a href="#gallery" class="nav-link" data-cursor="view">Gallery</a></li>
+      <li><a href="#contact" class="nav-link nav-link-cta" data-cursor="connect">Connect</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-inner">
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#timeline" class="mobile-nav-link">Journey</a>
+      <a href="#classes" class="mobile-nav-link">Classes</a>
+      <a href="#gallery" class="mobile-nav-link">Gallery</a>
+      <a href="#contact" class="mobile-nav-link">Connect</a>
+      <div class="mobile-nav-note">♪</div>
+    </div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <!-- Three.js Canvas Background -->
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+
+    <!-- Gradient Overlays -->
+    <div class="hero-gradient-left"></div>
+    <div class="hero-gradient-bottom"></div>
+
+    <!-- Floating Musical Notes Layer -->
+    <div class="hero-notes-layer" id="heroNotesLayer">
+      <span class="float-note fn1">♪</span>
+      <span class="float-note fn2">♫</span>
+      <span class="float-note fn3">♩</span>
+      <span class="float-note fn4">♬</span>
+      <span class="float-note fn5">𝄞</span>
+      <span class="float-note fn6">♪</span>
+      <span class="float-note fn7">♫</span>
+      <span class="float-note fn8">♩</span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="hero-inner" id="heroInner">
+      <!-- Portrait -->
+      <div class="hero-portrait-col" id="heroPortraitCol">
+        <div class="hero-portrait-wrap" id="heroPortraitWrap">
+          <div class="portrait-ring portrait-ring-outer"></div>
+          <div class="portrait-ring portrait-ring-mid"></div>
+          <div class="portrait-frame" id="portraitFrame">
+            <div class="portrait-placeholder" id="portraitPlaceholder">
+              <div class="portrait-glow-base"></div>
+              <div class="portrait-silhouette-art"></div>
+              <div class="portrait-add-label">
+                <span class="portrait-add-icon">📷</span>
+                <span>Your Portrait</span>
+              </div>
+            </div>
+          </div>
+          <div class="portrait-corner c-tl"></div>
+          <div class="portrait-corner c-tr"></div>
+          <div class="portrait-corner c-bl"></div>
+          <div class="portrait-corner c-br"></div>
+        </div>
+      </div>
+
+      <!-- Hero Text -->
+      <div class="hero-text-col" id="heroTextCol">
+        <div class="hero-eyebrow" id="heroEyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-tag">Classical Vocalist · Music Educator</span>
+        </div>
+
+        <h1 class="hero-name" id="heroName">
+          <span class="hero-name-part" id="heroPart1">Chandrabali</span>
+          <em class="hero-name-part hero-surname" id="heroPart2">Rudra</em>
+        </h1>
+
+        <p class="hero-tagline" id="heroTagline">
+          Where ancient tradition meets<br>contemporary excellence
+        </p>
+
+        <div class="hero-stats" id="heroStats">
+          <div class="hero-stat">
+            <span class="stat-num" data-target="30" id="statExp">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Years of Mastery</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="stat-num" data-target="500" id="statStudents">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Students Guided</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="stat-num" data-target="15" id="statCountries">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Countries Reached</span>
+          </div>
+        </div>
+
+        <div class="hero-actions" id="heroActions">
+          <a href="#classes" class="btn-hero-primary magnetic-btn" id="heroBtnPrimary" data-cursor="explore">
+            <span class="btn-text">Explore Classes</span>
+            <span class="btn-icon">→</span>
+            <span class="btn-bg-fill"></span>
+          </a>
+          <a href="#about" class="btn-hero-ghost magnetic-btn" id="heroBtnGhost" data-cursor="read">
+            <span>Discover My Story</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-cue" id="scrollCue">
+      <span class="scroll-cue-label">Scroll to explore</span>
+      <div class="scroll-cue-track">
+        <div class="scroll-cue-thumb"></div>
+      </div>
+    </div>
+
+    <!-- Decorative horizontal rules -->
+    <div class="hero-rule hero-rule-top"></div>
+    <div class="hero-rule hero-rule-bottom"></div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about" id="about">
+    <div class="section-bg-gradient about-bg"></div>
+    <!-- Ambient floating notes -->
+    <div class="ambient-notes">
+      <span class="amb-note">♪</span><span class="amb-note">♫</span><span class="amb-note">♬</span>
+    </div>
+
+    <div class="container">
+      <div class="section-label-wrap">
+        <span class="section-rule"></span>
+        <span class="section-label">About</span>
+      </div>
+
+      <div class="about-grid">
+        <!-- Image Stack -->
+        <div class="about-images">
+          <div class="about-img-main img-mask-reveal">
+            <div class="img-ph img-ph-1">
+              <div class="img-ph-inner">
+                <span class="img-ph-icon">🎵</span>
+                <span class="img-ph-text">Add Your Image</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-img-secondary img-mask-reveal">
+            <div class="img-ph img-ph-2">
+              <div class="img-ph-inner">
+                <span class="img-ph-icon">🎤</span>
+                <span class="img-ph-text">Add Performance Photo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating stat card -->
+          <div class="float-stat-card glass-card" id="floatStatCard">
+            <div class="float-stat-icon">♪</div>
+            <div class="float-stat-num">
+              <span class="counter" data-target="30">0</span><span>+</span>
+            </div>
+            <div class="float-stat-label">Years of<br>Musical Excellence</div>
+          </div>
+
+          <div class="float-award-card glass-card" id="floatAwardCard">
+            <span class="award-emoji">🏆</span>
+            <span class="award-text">National Award<br>Recipient</span>
+          </div>
+        </div>
+
+        <!-- Text Content -->
+        <div class="about-content">
+          <h2 class="section-title split-title" id="aboutTitle">
+            A Voice Shaped<br><em>by Tradition</em>
+          </h2>
+
+          <div class="about-divider">
+            <span class="divider-note">♩</span>
+          </div>
+
+          <p class="about-para stagger-para">
+            With over three decades of immersion in Hindustani Classical Music, Chandrabali Rudra has become one of the most respected voices in the classical vocal tradition. Her journey began at the feet of legendary masters, and today she carries that torch forward — lighting the path for hundreds of aspiring musicians.
+          </p>
+
+          <p class="about-para stagger-para">
+            Her teaching philosophy bridges the sacred rigor of classical raga training with an intuitive understanding of each student's unique musical soul. Under her guidance, ancient art forms become alive, accessible, and profoundly transformative.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-row stagger-item">
+              <div class="highlight-icon-wrap"><span>🎵</span></div>
+              <div class="highlight-info">
+                <h4>Hindustani Classical Mastery</h4>
+                <p>Trained under legendary Guru-Shishya lineage</p>
+              </div>
+            </div>
+            <div class="highlight-row stagger-item">
+              <div class="highlight-icon-wrap"><span>🎓</span></div>
+              <div class="highlight-info">
+                <h4>Celebrated Educator</h4>
+                <p>500+ students across India & 15 countries worldwide</p>
+              </div>
+            </div>
+            <div class="highlight-row stagger-item">
+              <div class="highlight-icon-wrap"><span>🌟</span></div>
+              <div class="highlight-info">
+                <h4>Acclaimed Performer</h4>
+                <p>Stages across India, UK, USA, UAE & beyond</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE SECTION ===== -->
+  <section class="timeline-sec" id="timeline">
+    <div class="timeline-depth-bg"></div>
+    <div class="container">
+      <div class="section-label-wrap">
+        <span class="section-rule"></span>
+        <span class="section-label">The Journey</span>
+      </div>
+      <h2 class="section-title text-center split-title" id="timelineTitle">
+        A Life Devoted<br><em>to Music</em>
+      </h2>
+
+      <div class="timeline-wrap">
+        <div class="timeline-spine" id="timelineSpine">
+          <div class="timeline-spine-fill" id="timelineSpineFill"></div>
+        </div>
+
+        <!-- Timeline Items -->
+        <div class="tl-item tl-left" id="tl0">
+          <div class="tl-dot"></div>
+          <div class="tl-card tilt-card glass-card">
+            <span class="tl-year">1990</span>
+            <h3 class="tl-title">Musical Awakening</h3>
+            <p class="tl-body">Began formal training in Hindustani Classical Vocals under the tutelage of her Guruji — embarking on a lifelong devotion to the world of ragas, talas, and the sacred oral tradition.</p>
+            <div class="tl-card-accent"></div>
+          </div>
+        </div>
+
+        <div class="tl-item tl-right" id="tl1">
+          <div class="tl-dot"></div>
+          <div class="tl-card tilt-card glass-card">
+            <span class="tl-year">1998</span>
+            <h3 class="tl-title">First Grand Recital</h3>
+            <p class="tl-body">Delivered her debut major public performance to a standing ovation. The concert received critical acclaim and established her as a rising star in classical music circles.</p>
+            <div class="tl-card-accent"></div>
+          </div>
+        </div>
+
+        <div class="tl-item tl-left" id="tl2">
+          <div class="tl-dot"></div>
+          <div class="tl-card tilt-card glass-card">
+            <span class="tl-year">2005</span>
+            <h3 class="tl-title">Academy Founded</h3>
+            <p class="tl-body">Established the Chandrabali Music Academy — a sacred space for aspiring musicians to discover their voice and connect deeply with India's rich classical traditions.</p>
+            <div class="tl-card-accent"></div>
+          </div>
+        </div>
+
+        <div class="tl-item tl-right" id="tl3">
+          <div class="tl-dot"></div>
+          <div class="tl-card tilt-card glass-card">
+            <span class="tl-year">2012</span>
+            <h3 class="tl-title">National Recognition</h3>
+            <p class="tl-body">Received the prestigious National Music Award for outstanding contribution to classical vocal arts, cementing her status as a guardian of India's musical heritage.</p>
+            <div class="tl-card-accent"></div>
+          </div>
+        </div>
+
+        <div class="tl-item tl-left" id="tl4">
+          <div class="tl-dot"></div>
+          <div class="tl-card tilt-card glass-card">
+            <span class="tl-year">2018</span>
+            <h3 class="tl-title">Going Global</h3>
+            <p class="tl-body">Extended teaching to students across 15+ countries through live online platforms — bringing the purity and depth of Hindustani classical music to every corner of the world.</p>
+            <div class="tl-card-accent"></div>
+          </div>
+        </div>
+
+        <div class="tl-item tl-right" id="tl5">
+          <div class="tl-dot"></div>
+          <div class="tl-card tilt-card glass-card">
+            <span class="tl-year">2024</span>
+            <h3 class="tl-title">Legacy Continues</h3>
+            <p class="tl-body">500+ students trained, 50+ stage performances, and an unwavering commitment to passing the torch of classical music to the next generation — the journey never ends.</p>
+            <div class="tl-card-accent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLASSES SECTION ===== -->
+  <section class="classes" id="classes">
+    <div class="container">
+      <div class="section-label-wrap">
+        <span class="section-rule"></span>
+        <span class="section-label">What I Teach</span>
+      </div>
+      <h2 class="section-title split-title" id="classesTitle">
+        Find Your<br><em>Musical Path</em>
+      </h2>
+      <p class="section-subtitle stagger-para">
+        Carefully curated programs for every stage of your musical journey — taught with patience, passion, and deep classical grounding.
+      </p>
+
+      <div class="classes-grid">
+        <div class="class-card tilt-card" id="classCard1">
+          <div class="class-card-glow"></div>
+          <div class="class-card-body">
+            <div class="class-icon-circle">
+              <span class="class-icon-inner">𝄞</span>
+            </div>
+            <div class="class-badge-top">Most Popular</div>
+            <h3 class="class-title">Hindustani Classical Vocals</h3>
+            <p class="class-desc">Deep immersion into ragas, talas, and the ancient Guru-Shishya oral tradition. For those committed to the path of mastery.</p>
+            <ul class="class-list">
+              <li>Raga identification & improvisation</li>
+              <li>Tala & rhythmic training</li>
+              <li>Bandish & khayal learning</li>
+              <li>Performance preparation</li>
+            </ul>
+            <div class="class-footer-row">
+              <span class="class-level-badge">Beginner → Advanced</span>
+              <a href="#contact" class="class-cta-btn magnetic-btn" data-cursor="connect">Enquire →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="class-card tilt-card" id="classCard2">
+          <div class="class-card-glow"></div>
+          <div class="class-card-body">
+            <div class="class-icon-circle">
+              <span class="class-icon-inner">♪</span>
+            </div>
+            <h3 class="class-title">Semi-Classical & Thumri</h3>
+            <p class="class-desc">Explore the lyrical, emotional world of thumri, dadra, and semi-classical forms — where rigour meets romance and expressive freedom.</p>
+            <ul class="class-list">
+              <li>Thumri & dadra styles</li>
+              <li>Expressive singing techniques</li>
+              <li>Bhav & emotional depth</li>
+              <li>Personalised riyaz guidance</li>
+            </ul>
+            <div class="class-footer-row">
+              <span class="class-level-badge">All Levels</span>
+              <a href="#contact" class="class-cta-btn magnetic-btn" data-cursor="connect">Enquire →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="class-card tilt-card" id="classCard3">
+          <div class="class-card-glow"></div>
+          <div class="class-card-body">
+            <div class="class-icon-circle">
+              <span class="class-icon-inner">♫</span>
+            </div>
+            <h3 class="class-title">Devotional & Bhajan</h3>
+            <p class="class-desc">Connect music with spirituality. Learn the sacred tradition of bhajan, kirtan, and devotional compositions with proper musical foundation.</p>
+            <ul class="class-list">
+              <li>Classical bhajan training</li>
+              <li>Kirtan & group singing</li>
+              <li>Swar & notation basics</li>
+              <li>Spiritual musical traditions</li>
+            </ul>
+            <div class="class-footer-row">
+              <span class="class-level-badge">Beginner Friendly</span>
+              <a href="#contact" class="class-cta-btn magnetic-btn" data-cursor="connect">Enquire →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="class-card tilt-card" id="classCard4">
+          <div class="class-card-glow"></div>
+          <div class="class-card-body">
+            <div class="class-icon-circle">
+              <span class="class-icon-inner">🌐</span>
+            </div>
+            <h3 class="class-title">Live Online Classes</h3>
+            <p class="class-desc">The authentic Guru-Shishya experience, delivered anywhere in the world. Same depth, same dedication — through the screen.</p>
+            <ul class="class-list">
+              <li>1-on-1 personalised sessions</li>
+              <li>Flexible global scheduling</li>
+              <li>Session recordings available</li>
+              <li>Worldwide student community</li>
+            </ul>
+            <div class="class-footer-row">
+              <span class="class-level-badge">Worldwide</span>
+              <a href="#contact" class="class-cta-btn magnetic-btn" data-cursor="connect">Enquire →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PHILOSOPHY SECTION ===== -->
+  <section class="philosophy" id="philosophy">
+    <canvas class="wave-canvas" id="waveCanvas"></canvas>
+    <div class="philosophy-overlay"></div>
+    <div class="philosophy-cursor-light" id="philosophyLight"></div>
+
+    <div class="container philosophy-container">
+      <div class="section-label-wrap light-label">
+        <span class="section-rule"></span>
+        <span class="section-label">Teaching Philosophy</span>
+      </div>
+
+      <div class="quote-block" id="quoteBlock">
+        <span class="quote-mark-open">"</span>
+        <div class="quote-text" id="quoteText">
+          <!-- Words inserted by JS -->
+        </div>
+        <span class="quote-mark-close">"</span>
+      </div>
+
+      <div class="philosophy-attribution" id="philosophyAttr">
+        <span class="attr-rule"></span>
+        <span class="attr-name">Chandrabali Rudra</span>
+        <span class="attr-rule"></span>
+      </div>
+
+      <p class="philosophy-body stagger-para" id="philosophyBody">
+        Music is not merely an art to be learned — it is a language of the soul to be discovered. Every raga carries a lifetime of wisdom, every note a universe of emotion. My purpose as a teacher is not just to train voices, but to awaken an understanding that transcends technique and touches the eternal.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS SECTION ===== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-label-wrap">
+        <span class="section-rule"></span>
+        <span class="section-label">Student Stories</span>
+      </div>
+      <h2 class="section-title split-title" id="testimonialsTitle">
+        Words from<br><em>Beloved Students</em>
+      </h2>
+    </div>
+
+    <div class="testimonials-viewport">
+      <div class="testimonials-track" id="testimonialsTrack">
+        <!-- Row 1 -->
+        <div class="t-card glass-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Guruma's teaching transformed my entire relationship with music. What I thought was just a hobby became a lifelong devotion. Her patience and depth of knowledge are truly extraordinary."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #C9A84C, #8B1A3C)">A</div>
+            <div class="t-info"><strong>Ananya Sharma</strong><span>Student since 2018 · Mumbai</span></div>
+          </div>
+        </div>
+        <div class="t-card glass-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"I had tried many teachers before, but Chandrabali ji's approach is unique. She sees your soul and teaches accordingly. My voice found its true colour under her guidance."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #6B3FA0, #C9A84C)">R</div>
+            <div class="t-info"><strong>Rahul Bose</strong><span>Student since 2015 · Kolkata</span></div>
+          </div>
+        </div>
+        <div class="t-card glass-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Taking online classes from Canada, I was worried about the experience. But Guruma made it feel like we were in the same room. The warmth and rigour are unmistakable."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #1A5C8B, #C9A84C)">P</div>
+            <div class="t-info"><strong>Priya Nair</strong><span>Online Student · Toronto, Canada</span></div>
+          </div>
+        </div>
+        <div class="t-card glass-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"The journey from a complete beginner to performing on stage in just 3 years. Chandrabali ji's systematic and soulful approach makes the impossible, beautifully possible."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #2D7D46, #C9A84C)">S</div>
+            <div class="t-info"><strong>Suresh Menon</strong><span>Student since 2020 · Bengaluru</span></div>
+          </div>
+        </div>
+        <div class="t-card glass-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Her knowledge of ragas is encyclopedic, but her ability to connect that knowledge to the heart of music is what sets her apart. Every lesson is a profound experience."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #8B1A3C, #6B3FA0)">M</div>
+            <div class="t-info"><strong>Meera Pillai</strong><span>Student since 2010 · New Delhi</span></div>
+          </div>
+        </div>
+        <div class="t-card glass-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"My daughter has been learning for 2 years and the transformation is remarkable. Beyond music, she has gained discipline, focus, and a profound love for Indian cultural heritage."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #C9A84C, #2D7D46)">N</div>
+            <div class="t-info"><strong>Nita Kulkarni</strong><span>Parent · Pune</span></div>
+          </div>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="t-card glass-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Guruma's teaching transformed my entire relationship with music. What I thought was just a hobby became a lifelong devotion. Her patience and depth of knowledge are truly extraordinary."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #C9A84C, #8B1A3C)">A</div>
+            <div class="t-info"><strong>Ananya Sharma</strong><span>Student since 2018 · Mumbai</span></div>
+          </div>
+        </div>
+        <div class="t-card glass-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"I had tried many teachers before, but Chandrabali ji's approach is unique. She sees your soul and teaches accordingly. My voice found its true colour under her guidance."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #6B3FA0, #C9A84C)">R</div>
+            <div class="t-info"><strong>Rahul Bose</strong><span>Student since 2015 · Kolkata</span></div>
+          </div>
+        </div>
+        <div class="t-card glass-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Taking online classes from Canada, I was worried about the experience. But Guruma made it feel like we were in the same room. The warmth and rigour are unmistakable."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #1A5C8B, #C9A84C)">P</div>
+            <div class="t-info"><strong>Priya Nair</strong><span>Online Student · Toronto, Canada</span></div>
+          </div>
+        </div>
+        <div class="t-card glass-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"The journey from a complete beginner to performing on stage in just 3 years. Chandrabali ji's systematic and soulful approach makes the impossible, beautifully possible."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #2D7D46, #C9A84C)">S</div>
+            <div class="t-info"><strong>Suresh Menon</strong><span>Student since 2020 · Bengaluru</span></div>
+          </div>
+        </div>
+        <div class="t-card glass-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Her knowledge of ragas is encyclopedic, but her ability to connect that knowledge to the heart of music is what sets her apart. Every lesson is a profound experience."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #8B1A3C, #6B3FA0)">M</div>
+            <div class="t-info"><strong>Meera Pillai</strong><span>Student since 2010 · New Delhi</span></div>
+          </div>
+        </div>
+        <div class="t-card glass-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"My daughter has been learning for 2 years and the transformation is remarkable. Beyond music, she has gained discipline, focus, and a profound love for Indian cultural heritage."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #C9A84C, #2D7D46)">N</div>
+            <div class="t-info"><strong>Nita Kulkarni</strong><span>Parent · Pune</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <section class="gallery-sec" id="gallery">
+    <div class="container">
+      <div class="section-label-wrap">
+        <span class="section-rule"></span>
+        <span class="section-label">Gallery</span>
+      </div>
+      <h2 class="section-title split-title" id="galleryTitle">
+        Moments in<br><em>Music & Art</em>
+      </h2>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="g-item" data-caption="Stage Performance" data-icon="🎵">
+        <div class="g-img">
+          <div class="g-ph gph-1"><span class="gph-icon">🎵</span><span class="gph-text">Add Performance Photo</span></div>
+        </div>
+        <div class="g-overlay"><span class="g-caption">Stage Performance</span><span class="g-plus">+</span></div>
+      </div>
+      <div class="g-item g-tall" data-caption="Teaching Session" data-icon="🎓">
+        <div class="g-img">
+          <div class="g-ph gph-2"><span class="gph-icon">🎓</span><span class="gph-text">Add Teaching Photo</span></div>
+        </div>
+        <div class="g-overlay"><span class="g-caption">Teaching Session</span><span class="g-plus">+</span></div>
+      </div>
+      <div class="g-item" data-caption="Award Ceremony" data-icon="🏆">
+        <div class="g-img">
+          <div class="g-ph gph-3"><span class="gph-icon">🏆</span><span class="gph-text">Add Award Photo</span></div>
+        </div>
+        <div class="g-overlay"><span class="g-caption">Award Ceremony</span><span class="g-plus">+</span></div>
+      </div>
+      <div class="g-item g-wide" data-caption="Concert Hall Performance" data-icon="🎤">
+        <div class="g-img">
+          <div class="g-ph gph-4"><span class="gph-icon">🎤</span><span class="gph-text">Add Concert Photo</span></div>
+        </div>
+        <div class="g-overlay"><span class="g-caption">Concert Hall</span><span class="g-plus">+</span></div>
+      </div>
+      <div class="g-item" data-caption="Cultural Event" data-icon="✨">
+        <div class="g-img">
+          <div class="g-ph gph-5"><span class="gph-icon">✨</span><span class="gph-text">Add Cultural Photo</span></div>
+        </div>
+        <div class="g-overlay"><span class="g-caption">Cultural Event</span><span class="g-plus">+</span></div>
+      </div>
+      <div class="g-item g-tall" data-caption="Devotional Music" data-icon="🙏">
+        <div class="g-img">
+          <div class="g-ph gph-6"><span class="gph-icon">🙏</span><span class="gph-text">Add Devotional Photo</span></div>
+        </div>
+        <div class="g-overlay"><span class="g-caption">Devotional Music</span><span class="g-plus">+</span></div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+      <div class="lb-backdrop" id="lbBackdrop"></div>
+      <div class="lb-content">
+        <div class="lb-display" id="lbDisplay">
+          <span class="lb-icon" id="lbIcon"></span>
+          <span class="lb-caption-text" id="lbCaption"></span>
+        </div>
+        <button class="lb-btn lb-close" id="lbClose" aria-label="Close">✕</button>
+        <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+        <button class="lb-btn lb-next" id="lbNext" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact" id="contact">
+    <div class="contact-ambient-bg"></div>
+    <div class="container">
+      <div class="contact-layout">
+        <!-- Left: Info -->
+        <div class="contact-info-col">
+          <div class="section-label-wrap">
+            <span class="section-rule"></span>
+            <span class="section-label">Get in Touch</span>
+          </div>
+          <h2 class="section-title split-title" id="contactTitle">
+            Begin Your<br><em>Musical Journey</em>
+          </h2>
+          <p class="contact-intro stagger-para">
+            Ready to discover the music within you? Whether you are a complete beginner or a seasoned musician seeking deeper classical training, I would love to guide you on this beautiful path.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item stagger-item">
+              <div class="contact-detail-icon">✉</div>
+              <div class="contact-detail-text">
+                <span class="cd-label">Email</span>
+                <span class="cd-value">chandrabali@musicacademy.com</span>
+              </div>
+            </div>
+            <div class="contact-detail-item stagger-item">
+              <div class="contact-detail-icon">📞</div>
+              <div class="contact-detail-text">
+                <span class="cd-label">Phone</span>
+                <span class="cd-value">+91 98xxx xxxxx</span>
+              </div>
+            </div>
+            <div class="contact-detail-item stagger-item">
+              <div class="contact-detail-icon">📍</div>
+              <div class="contact-detail-text">
+                <span class="cd-label">Location</span>
+                <span class="cd-value">Kolkata, West Bengal, India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-row">
+            <a href="#" class="soc-btn magnetic-btn" aria-label="YouTube" data-cursor="visit">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6a3 3 0 00-2.1 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+            </a>
+            <a href="#" class="soc-btn magnetic-btn" aria-label="Instagram" data-cursor="visit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="soc-btn magnetic-btn" aria-label="Facebook" data-cursor="visit">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-col">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="field-group">
+              <input type="text" id="fName" class="field-input" placeholder=" " autocomplete="name">
+              <label for="fName" class="field-label">Your Name</label>
+              <span class="field-bar"></span>
+            </div>
+            <div class="field-group">
+              <input type="email" id="fEmail" class="field-input" placeholder=" " autocomplete="email">
+              <label for="fEmail" class="field-label">Email Address</label>
+              <span class="field-bar"></span>
+            </div>
+            <div class="field-group">
+              <input type="tel" id="fPhone" class="field-input" placeholder=" " autocomplete="tel">
+              <label for="fPhone" class="field-label">Phone Number</label>
+              <span class="field-bar"></span>
+            </div>
+            <div class="field-group">
+              <select id="fInterest" class="field-input field-select">
+                <option value="" disabled selected></option>
+                <option>Hindustani Classical Vocals</option>
+                <option>Semi-Classical & Thumri</option>
+                <option>Devotional & Bhajan</option>
+                <option>Online Classes</option>
+                <option>Other / General Enquiry</option>
+              </select>
+              <label for="fInterest" class="field-label">I'm Interested In</label>
+              <span class="field-bar"></span>
+            </div>
+            <div class="field-group">
+              <textarea id="fMessage" class="field-input field-textarea" placeholder=" " rows="4"></textarea>
+              <label for="fMessage" class="field-label">Your Message</label>
+              <span class="field-bar"></span>
+            </div>
+            <button type="submit" class="submit-btn magnetic-btn" id="submitBtn">
+              <span class="submit-default">Send Message ♪</span>
+              <span class="submit-loading">Sending...</span>
+              <span class="submit-success">✓ Message Sent!</span>
+              <div class="submit-ripple"></div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="footer-notes-bg">
+      <span class="f-note">♪</span>
+      <span class="f-note">♫</span>
+      <span class="f-note">♬</span>
+      <span class="f-note">𝄞</span>
+      <span class="f-note">♩</span>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-logo">CR</div>
+          <div class="footer-brand-name">Chandrabali Rudra</div>
+          <p class="footer-brand-desc">Classical Vocalist & Music Educator — Preserving tradition, inspiring the future.</p>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Navigate</h4>
+          <nav class="footer-nav">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#timeline">Journey</a>
+            <a href="#classes">Classes</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-contact-col">
+          <h4 class="footer-nav-heading">Connect</h4>
+          <p>chandrabali@musicacademy.com</p>
+          <p>Kolkata, West Bengal, India</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="YouTube">▶</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="Facebook">f</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Chandrabali Rudra. All rights reserved.</span>
+        <span class="footer-craft">Crafted with ♥ for the love of music</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
