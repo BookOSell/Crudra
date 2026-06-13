@@ -403,15 +403,7 @@ function runHeroEntrance() {
     stagger: 0.1, ease: 'power3.out', delay: 0.1,
   });
 
-  // Portrait emerge from darkness
-  const portrait = $('#heroPortraitWrap');
-  if (portrait) {
-    gsap.fromTo(portrait,
-      { opacity: 0, scale: 0.88, filter: 'brightness(0)' },
-      { opacity: 1, scale: 1,    filter: 'brightness(1)',
-        duration: 1.8, ease: 'power3.out', delay: 0.2 }
-    );
-  }
+  // Portrait emerge removed
 
   // Text sequence
   const tl = gsap.timeline({ delay: 0.4 });
@@ -447,10 +439,6 @@ function runHeroEntrance() {
   document.addEventListener('mousemove', e => {
     const nx = (e.clientX / window.innerWidth  - 0.5);
     const ny = (e.clientY / window.innerHeight - 0.5);
-    gsap.to('#heroPortraitWrap', {
-      x: nx * -18, y: ny * -12,
-      duration: 1.2, ease: 'power2.out',
-    });
     gsap.to('#heroTextCol', {
       x: nx * 8, y: ny * 5,
       duration: 1.4, ease: 'power2.out',
@@ -1049,17 +1037,7 @@ function initSectionEffects() {
     },
   });
 
-  // Subtle scale on scroll for hero portrait
-  gsap.to('#heroPortraitWrap', {
-    scale: 0.92,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.hero',
-      start: 'center center',
-      end: 'bottom top',
-      scrub: 1.5,
-    },
-  });
+  // Portrait scale removed
 
   // Classes section heading slide
   gsap.fromTo('.section-subtitle',
@@ -1132,34 +1110,7 @@ function initScrollProgress() {
   });
 }
 
-// ─── 19c. PORTRAIT SHIMMER ────────────────────────────────────
-function initPortraitShimmer() {
-  const frame = $('#portraitFrame');
-  if (!frame) return;
-  // Pulsing gold border glow
-  gsap.to(frame, {
-    boxShadow: '0 0 40px rgba(201,168,76,0.35), inset 0 0 20px rgba(201,168,76,0.05)',
-    duration: 2.5,
-    repeat: -1,
-    yoyo: true,
-    ease: 'sine.inOut',
-  });
-  // Slow continuous rotation of outer ring
-  gsap.to('.portrait-ring-outer', {
-    rotation: 360,
-    duration: 18,
-    repeat: -1,
-    ease: 'none',
-    transformOrigin: 'center center',
-  });
-  gsap.to('.portrait-ring-mid', {
-    rotation: -360,
-    duration: 24,
-    repeat: -1,
-    ease: 'none',
-    transformOrigin: 'center center',
-  });
-}
+// Portrait shimmer removed
 
 // ─── INIT ALL ─────────────────────────────────────────────────
 function init() {
@@ -1194,7 +1145,6 @@ function init() {
   initAnchorScroll();
   initPageEntrance();
   initMagnetic();
-  initPortraitShimmer();
 
   // Preloader fires last (it will call runHeroEntrance when done)
   initPreloader();
